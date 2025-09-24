@@ -1,0 +1,4 @@
+# download and extract grassco corpus clinical documents
+wget -nc https://zenodo.org/api/records/6539131/files-archive
+mkdir -p grassco
+unzip -n files-archive -d grassco
