@@ -33,7 +33,13 @@ class Models:
 
 class ChatCompletions:
     def __init__(
-        self, api_key, model, temperature=0.7, choices=1, max_tokens=100, user="default"
+        self,
+        api_key,
+        model,
+        temperature=0.7,
+        choices=1,
+        max_tokens=10000,
+        user="default",
     ):
         self.api_key = api_key
         self.model = model
