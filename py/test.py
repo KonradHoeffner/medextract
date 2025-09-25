@@ -1,10 +1,11 @@
 import requests
 import os
 
-ENDPOINT = "https://api.helmholtz-blablador.fz-juelich.de/v1/completions"
 PAT = os.getenv("HELMHOLTZ_PAT")
 if not PAT:
     raise ValueError("HELMHOLTZ_PAT environment variable not set.")
+
+ENDPOINT = "https://api.helmholtz-blablador.fz-juelich.de/v1/completions"
 
 
 def completion(s):
@@ -37,4 +38,9 @@ def completion(s):
         print(f"Error: {response.status_code}")
 
 
-completion("The best ice cream is:")
+def main():
+    completion("The best ice cream is:")
+
+
+if __name__ == "__main__":
+    main()
